@@ -1,0 +1,114 @@
+.price
+	padding: 120px 0
+	&_title
+		@extend .works_title
+	&_text
+		@extend .works_text
+	.circle
+		margin: 30px auto
+		&::after, &::before
+			background-color: #999
+	&_items
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		text-align: center
+		margin-top: 40px
+	&_item
+		flex-basis: 32%
+		margin-top: 20px
+		background-color: #e4e5e6
+		padding-bottom: 50px
+	&_top
+		background-color: #999
+		padding-top: 50px
+		padding-bottom: 130px
+		h5
+			margin: 0
+			text-transform: uppercase
+			color: #fff
+			font-size: 24px
+			letter-spacing: 1.8px
+	&_circle
+		width: 150px
+		height: 150px
+		border-radius: 50%
+		background-color: #fff
+		border: 10px solid rgba(244,245,249,0.9)
+		margin: 0 auto
+		display: flex
+		align-items: center
+		justify-content: center
+		margin-top: -75px
+		p
+			font-size: 40px
+			font-weight: 800
+			margin: 0
+			color: #999
+			line-height: 40px
+			padding-top: 5px
+			span
+				display: block
+				font-weight: 300
+				font-size: 14px
+				line-height: 21px
+	&_list
+		padding: 40px 0
+		li
+			color: #6a6a6a
+			font-size: 14px
+			line-height: 22px
+			margin: 20px 0
+			font-weight: 300
+	a
+		@include buttons()
+		width: 145px
+		border-radius: 2px
+		font-size: 12px
+		background-color: #999
+		border-color: #999
+	.price_item.active
+		.price_top
+			background-color: $pinked
+		.price_number
+			color: $pinked
+			span
+				color: #999
+		a
+			background-color: $pinked		
+			border-color: $pinked	
+			@include buttons()
+			width: 145px
+			border-radius: 2px
+			font-size: 12px
+
+@media (max-width: 991.98px)
+	.price
+		padding: 60px 0
+
+@media (max-width: 767.98px)
+	.price
+		&_items
+			justify-content: center
+		&_item
+			flex-basis: 40%
+			margin-right: 0
+			margin-left: 10px
+			margin-right: 10px
+		.price_item.active
+			flex-basis: calc(80% + 20px)
+			margin-right: 0
+			margin-left: 0
+			order: 3
+
+@media (max-width: 575.98px)
+	.price
+		&_item
+			flex-basis: 100%
+			margin-left: 0
+			margin-right: 0
+		.price_item.active
+			order: -1
+			flex-basis: 100%
+
+

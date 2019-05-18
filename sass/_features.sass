@@ -1,0 +1,70 @@
+.features
+	border-bottom: 2px solid $line
+	padding: 60px 0
+	&_items
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+	&_item
+		flex-basis: 24%
+		margin: 20px 0
+		text-align: center
+		&:hover h4
+			color: $pinked
+	&_icon
+		width: 73px
+		height: 73px
+		border-radius: 5px
+		border: 1px solid $line
+		position: relative
+		cursor: pointer
+		margin: 20px auto
+		transition: all 1s
+		&:hover
+			transform: rotate(45deg)
+			border-color: $pinked
+			width: 73px
+			height: 73px
+		&:hover img
+			transform: translate(-50%, -50%) rotate(-45deg)
+		img
+			position: absolute
+			top: 50%
+			left: 50%
+			transition: transform 1s
+			transform: translate(-50%, -50%) rotate(0deg)
+	&_title
+		text-transform: uppercase
+		margin-bottom: 20px
+		font-weight: 800
+		color: #6a6a6a
+		font-size: 18px
+		letter-spacing: 1.35px
+		line-height: 20px
+		transition: color 0.2s
+		&::after
+			content: ''
+			background-color: #6a6a6a
+			height: 1px
+			width: 50px
+			display: block
+			margin: 20px auto
+	p
+		font-weight: 300
+		font-size: 14px
+		line-height: 24px
+		letter-spacing: 0.9px
+		padding: 0 15px
+
+@media (max-width: 991.98px)
+	.features
+		padding: 40px 0
+		&_item
+			flex-basis: 48%
+
+@media (max-width: 575.98px)
+	.features
+		padding: 25px 0
+		&_item
+			flex-basis: 100%
+			margin: 10px 0

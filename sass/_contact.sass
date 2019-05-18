@@ -1,0 +1,116 @@
+.contact
+	padding: 120px 0
+	background-color: #e5e6ea
+	&_title
+		@extend .works_title
+	&_text
+		@extend .works_text
+	.circle
+		margin: 30px auto
+		&::after, &::before
+			background-color: #999
+	&_items
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		margin-top: 60px
+	&_left
+		background-color: #fff
+		border-radius: 4px
+		box-shadow: 0 3px 6px rgba(0,0,0,0.2)
+		flex-basis: 40%
+		padding: 30px 95px
+	&_right
+		@extend .contact_left
+		flex-basis: 56%
+		display: flex
+		align-items: center
+		flex-wrap: wrap
+	&_form
+		flex-basis: 100%
+	&_info
+		margin-top: 50px
+		h4
+			text-transform: uppercase
+			color: $pinked
+			font-weight: 900
+			font-size: 20px
+			margin: 0
+			margin-bottom: 20px
+		p
+			color: #999
+			font-size: 16px
+			line-height: 24px
+			margin: 0
+			a
+				color: #999
+				font-size: 16px
+				line-height: 24px
+				margin: 0
+				&:hover
+					text-decoration: underline
+	&_input, &_textarea
+		position: relative
+		margin: 30px 0
+	input, textarea
+		font-size: 14px
+		line-height: 24px
+		width: 100%
+		font-weight: 800
+		color: #6a6a6a
+		border: none
+		border-bottom: 1px solid #e5e6ea
+		padding: 8px 0
+		&:focus + label, &:valid + label
+			transform: translateY(-25px)
+			font-size: 10px
+	textarea
+		resize: none
+		height: 100px !important
+		width: 100% !important
+		outline: none !important
+	label
+		font-size: 14px
+		line-height: 24px
+		width: 100%
+		font-weight: 800
+		color: #6a6a6a
+		position: absolute
+		left: 0
+		top: 8px
+		pointer-events: none
+		white-space: nowrap
+		overflow: hidden
+		text-overflow: ellipsis
+		transition: all 0.5s
+	button
+		@include buttons()
+		cursor: pointer
+		width: 170px
+
+@media (max-width: 991.98px)
+	.contact
+		padding: 60px 0
+		&_items
+			justify-content: center
+		&_right
+			flex-basis: 80%
+		&_left
+			flex-basis: 80%
+			margin-bottom: 40px
+			padding: 20px
+			padding-top: 0px
+
+@media (max-width: 575.98px)
+	.contact
+		&_left
+			flex-basis: 100%
+		&_right
+			flex-basis: 100%
+		button
+			width: 100%
+		&_info
+			margin-top: 20px
+			h4
+				margin-bottom: 10px
+

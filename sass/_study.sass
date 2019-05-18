@@ -1,0 +1,94 @@
+.study
+	background-color: #e5e5e5
+	padding: 120px 0
+	&_title
+		@extend .works_title
+	&_text
+		@extend .works_text
+	.circle
+		margin: 30px auto
+		margin-bottom: 50px
+		&::after, &::before
+			background-color: #999
+	&_left
+		width: 665px
+		position: relative
+		z-index: 2
+		background-color: #fff
+		box-shadow: 0 3px 6px rgba(0,0,0,0.4)
+		padding: 30px 50px 110px 50px
+		text-align: center
+		h4
+			font-size: 18px
+			text-transform: uppercase
+			color: #6a6a6a
+			letter-spacing: 0.35px
+			&::after
+				content: ''
+				width: 80px
+				height: 2px
+				background-color: #999
+				border-bottom: 1px solid #111
+				display: block
+				margin: 30px auto
+		p
+			color: #999
+			line-height: 24px
+			font-size: 14px
+			letter-spacing: 1px
+			font-weight: 300
+			margin-bottom: 50px
+
+	&_icon
+		background-color: $pinked
+		width: 127px
+		height: 127px
+		position: relative
+		transform: rotate(45deg)
+		margin: 50px auto
+		margin-bottom: 80px
+		picture
+			width: 50px
+			position: absolute
+			left: 50%
+			top: 50%
+			transform: translate(-50%, -50%) rotate(-45deg)
+	&_items
+		display: flex
+		align-items: center
+		justify-content: center
+	&_right
+		margin-left: -68px
+		img
+			max-width: 100%
+			display: block
+			height: auto
+	a
+		@include buttons()
+		width: 145px
+		border-radius: 2px
+		box-shadow: 0 2px 5px rgba(0,0,0,0.6)
+		line-height: 16px
+		padding: 13px 0
+		display: block
+		margin: auto
+
+@media (max-width: 991.98px)
+	.study
+		padding: 60px 0
+
+@media (max-width: 767.98px)
+	.study
+		&_items
+			flex-direction: column
+		&_right
+			margin-left: 0
+			margin-top: 50px
+		&_left
+			width: 100%
+			padding-bottom: 50px
+			padding-top: 0px
+			padding-right: 20px
+			padding-left: 20px
+
+

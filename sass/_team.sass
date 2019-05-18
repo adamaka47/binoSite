@@ -1,0 +1,158 @@
+.team
+	padding: 120px 0
+	position: relative
+	background-size: cover
+	padding-bottom: 500px
+	background: url('../img/team_line.png') center bottom no-repeat, url('../img/team_bg.jpg') center no-repeat
+	&_item
+		position: absolute
+		width: 200px
+		&:nth-child(1)
+			left: 0
+			bottom: -235px
+		&:nth-child(2)
+			left: 265px
+			bottom: -197px
+		&:nth-child(3)
+			left: 530px
+			bottom: -200px
+		&:nth-child(4)
+			right: 210px
+			bottom: -235px
+		&:nth-child(5)
+			right: 0px
+			bottom: -215px
+		// border: 2px solid red
+		&:hover::after
+			opacity: 1
+		&:hover .team_info
+			z-index: 1
+			opacity: 1
+		&:hover .team_img::after
+			opacity: 1
+		&:hover .team_img
+			transform: scale(1.2)
+		&::after
+			content: ''
+			width: 1px
+			height: 50px
+			background-color: #fff
+			display: block
+			position: absolute
+			left: 50%
+			bottom: -55px
+			transform: translateX(-50%)
+			opacity: 0
+			transition: opacity 0.4s
+	&_text
+		@extend .works_text
+		color: #fff
+	&_title
+		@extend .works_title
+		color: #fff
+	&_job
+		font-weight: 900
+		color: #fff
+		font-size: 14px
+		letter-spacing: 1.4px
+		text-align: center
+		margin: 10px 0
+		line-height: 24px
+	&_name
+		letter-spacing: 1.8px
+		line-height: 24px
+		font-size: 24px
+		color: $pinked
+		font-weight: 300
+		text-align: center
+		margin: 0
+	&_items
+		position: relative
+	&_img
+		width: 51px
+		height: 51px
+		border: 3px solid $pinked
+		border-radius: 50%
+		margin: 0 auto
+		transition: transform 0.4s
+		overflow: hidden
+		position: relative
+		&::after
+			content: ''
+			width: 100%
+			height: 100%
+			background-color: rgba($pinked,0.4)
+			position: absolute
+			top: 0
+			left: 0
+			border-radius: 50%
+			opacity: 0
+			transition: opacity 0.4s
+		img
+			max-width: 100%
+			display: block
+			height: auto
+	&_info
+		position: absolute
+		bottom: -140px
+		width: 100%
+		text-align: center
+		opacity: 0
+		z-index: -1
+		transition: opacity 0.4s
+
+
+@media (max-width: 1199.98px)
+	.team
+		background: url('../img/team_bg.jpg') center no-repeat
+		background-size: cover
+		padding: 120px 0
+		padding-bottom: 100px
+		&_item
+			position: relative
+			left: auto !important
+			top: auto !important
+			right: auto !important
+			bottom: auto !important
+			width: auto
+			flex-basis: 20%
+			margin: 25px 0
+			&::after
+				display: none
+		&_items
+			display: flex
+			justify-content: space-between
+			flex-wrap: wrap
+			margin-top: 60px
+		&_info
+			opacity: 1
+			z-index: 1
+			position: relative
+			bottom: auto
+			left: auto
+			right: auto
+			top: auto
+			margin-top: 20px
+		&_name
+			font-size: 20px
+		&_job
+			font-size: 12px
+
+@media (max-width: 991.98px)
+	.team
+		padding: 0
+		padding: 60px 0
+
+@media (max-width: 767.98px)
+	.team
+		&_item
+			flex-basis: 33%
+
+@media (max-width: 575.98px)
+	.team
+		&_item
+			flex-basis: 100%
+			margin: 50px 0
+
+
+
